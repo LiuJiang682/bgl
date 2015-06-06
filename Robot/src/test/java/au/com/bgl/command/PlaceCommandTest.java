@@ -127,4 +127,10 @@ public class PlaceCommandTest {
 		BGLRobotTable table = new BGLRobotTable();
 		assertFalse(command.isLegitimateMove(table));
 	}
+	
+	@Test
+	public void testToString() {
+		PlaceCommand command = new PlaceCommand("place 7, 7, north");
+		assertEquals("place 7, 7, north, valid false", command.toString());
+	}
 }
