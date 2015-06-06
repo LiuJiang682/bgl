@@ -13,10 +13,16 @@ public class CommandEnumTest {
 		assertEquals(CommandEnum.DONOTHING, CommandEnum.fromString(null));
 		assertEquals(CommandEnum.DONOTHING, CommandEnum.fromString(""));
 		assertEquals(CommandEnum.DONOTHING, CommandEnum.fromString("abc"));
-		assertEquals(CommandEnum.PLACE, CommandEnum.fromString("place"));
-		assertEquals(CommandEnum.LEFT, CommandEnum.fromString("LEFT"));
+		
 		assertEquals(CommandEnum.MOVE, CommandEnum.fromString("Move"));
+		assertEquals(CommandEnum.LEFT, CommandEnum.fromString("LEFT"));
 		assertEquals(CommandEnum.REPORT, CommandEnum.fromString("Report"));
 		assertEquals(CommandEnum.RIGHT, CommandEnum.fromString("right"));
+	}
+	
+	@Test
+	public void testFromStringMove() {
+		assertEquals(CommandEnum.PLACE, CommandEnum.fromString("place"));
+		assertEquals(CommandEnum.PLACE, CommandEnum.fromString("PLACE 0,0,NORTH"));
 	}
 }
