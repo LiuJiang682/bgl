@@ -32,7 +32,6 @@ public class LeftCommandExecuter implements CommandExecuter, Serializable {
 			Direction next = directionMap.get(robot.getFacing());
 			robot.setFacing(next);
 		}
-
 	}
 
 	static {
