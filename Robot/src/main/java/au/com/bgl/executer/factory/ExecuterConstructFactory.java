@@ -37,7 +37,7 @@ public class ExecuterConstructFactory implements Serializable {
 				break;
 				
 			case MOVE:
-				factory = new MoveCommonExecuterFactory();
+				factory = new MoveCommandExecuterFactory();
 				break;
 			
 			case LEFT:
@@ -49,7 +49,7 @@ public class ExecuterConstructFactory implements Serializable {
 				break;
 				
 			case REPORT:
-				factory = new ReportCommandExecuterFacotyr();
+				factory = new ReportCommandExecuterFactory();
 				break;
 				
 			case DONOTHING:
