@@ -1,0 +1,77 @@
+#Invalid command test
+RRplace 0, 1, east
+report
+
+# demon the robot ignore the sequence commands
+move
+report
+
+right
+report
+
+left
+report
+# end of sequence commands
+
+# Start valid place command
+place 2, 3, south
+report
+
+move
+report
+
+left
+report
+
+right
+report
+
+# move the robot to the boundry
+move
+move
+report
+
+# move the robot pass the boundry. 
+# The robot should ignore the command
+move
+report
+
+# place an invalid command.
+# The robot should ignore the command
+place 2, 2, ss
+report
+
+# move to boundry
+move
+report
+
+# turn the robot back
+left
+report
+
+left
+report
+
+# keep moving
+move
+report
+
+# place the robot in the origil spot.
+place 0, 0, south
+report
+
+# move the robot to (1, 1) spot.
+move
+report
+
+left
+report
+
+move
+report
+
+left
+report
+
+move
+report
